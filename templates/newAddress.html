@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <meta charset="utf-8">
+    <title>New Address</title>
+    <meta name="description" content="Web app that enables users to rate the condition and attributes of a property.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/writeReview.css">
+    <script src="https://kit.fontawesome.com/fbfdd5a072.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br><br><br>
+    <h1>Upload New Address</h1>
+    <form action="{{ url_for('upload_address') }}" method="post">
+        <label for="doorNum">Door Number:</label>
+        <input type="text" name="doorNum" id="doorNum" placeholder="Door Number" required>
+        <label for="streetName">Street:</label>
+        <input type="text" name="streetName" id="streetName" placeholder="Street" required>
+        <label for="addressLocation">Residence:</label>
+        <input type="text" name="addressLocation" id="addressLocation" placeholder="Town or City" required>
+        <label for="addressPostcode">Postcode:</label>
+        <input type="text" name="addressPostcode" id="addressPostcode" placeholder="Postcode" required>
+        <button type="submit" class="btn">Add New Address</button>
+    </form>
+</div>
+{% endblock%}

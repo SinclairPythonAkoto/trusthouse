@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+
+{% block title %}
+House Trust
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Main page content -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+    <div class="w3-container" style="margin-top:80px" id="home">
+    <h1 class="w3-jumbo"><b>Trust House</b></h1>
+    <h1 class="w3-large" style="color:red">Making Your Voice Heard In Your Community</hr>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+</div>
+
+<div class="w3-container" id="description">
+    <h1 class="w3-xxlarge"><b>Description</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+    This website is designed to allow anyone to rate the condotion of a property - no matter if you're a tenant, neighbour or just passing by.<br>
+    As a tenant you can review the condition of the property you're renting, or even your tenants.<br>
+    Neighbours can review the property also, along with anyone passing by - it doesn't have to be all negative!
+    </p>
+</div>
+
+<div class="w3-container" style="margin-top:80px" id="factors">
+    <h1 class="w3-xxlarge"><b>Factors</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Here are some factors to consider when creating a review - some factors can also be positive!
+    </p>
+</div>
+<!-- Adding flip on images  - Grid 1-->
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/houseParty.jpg" style="width:100%"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Parties & Large Gatherings</h2>
+        <p>Parties and gatherings causing a disturbance.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/swearing.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Rudness</h2>
+        <p>Rudeness or harrasment from people within the property.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/fighting.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Fighting</h2>
+        <p>Fighting or aggressive behaviour.</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<br/>
+
+<!-- Grid 2 -->
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/arguing.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Domestic Disturbances</h2>
+        <p>Neighbours arguing or being disruptive.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/rubbish_house.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Dirty / Unkempt</h2>
+        <p>Piles of rubbish & litter left laying around the property.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/drug_misuse.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Drug Misuse</h2>
+        <p>Drugs are used in or around the property.</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<br>
+<!-- Grid 3 -->
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/broken_sofa.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Broken Furniture</h2>
+        <p>Furniture broken before or during moving into property.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/mould.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Mould</h2>
+        <p>Damp and/or mould within the property.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/broken_appliances.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Broken Appliances</h2>
+        <p>Broken appliances within the property making it difficult to live in - broken fridge, boiler, cooker etc</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<br/>
+
+<!-- Grid 4 -->
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/infestation.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Infestation</h2>
+        <p>Rats, rodents, bugs and/or bugs cohibiting in the property.</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/messy_roommate.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Messy Housemates / Flatmates</h2>
+        <p>Unkepmt house mates making it difficult to live with them..</p>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="w3-col m4 w3-margin-bottom">
+    <div class="flip-box">
+        <div class="flip-box-inner">
+        <div class="flip-box-front">
+                <img class="blur-pic" src="static/angry-landlord.jpg" style="width:100%; height:200px;"/>
+        </div>
+        <div class="flip-box-back">
+            <h2>Difficult Landlords</h2>
+        <p>Landlords being diificult, causing harrasment, increasing rent without formal notice.</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="container" id="instructions">
+    <div class="w3-container" style="margin-top:80px">
+        <h1 class="w3-xxlarge"><b>Instructions</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round"/>
+        <p>
+            Creating a review can be done in <b>4 simple steps!</b>
+        </p>
+        <ol>
+            <li>Enter the address.</li>
+        <li>Give the property a rating (out of five)</li>
+        <li>Write your review.</li>
+        <li>Upload your review</li>
+        </ol>
+        <a href="{{ url_for('write_review') }}" style="color: red;">Write a review</a>
+    </div>
+</div>
+
+<div class="container" id="TrustHouseAPI">
+    <div class="w3-container" style="margin-top: 80px;">
+        <h1 class="w3-xxxlarge"><b>Trust House API</b></h1>
+        <hr style="width: 50px; border: 5px solid red" class="w3-round">
+        <p>
+            The API enables users to interact with the database within the brower and allows other developers
+            to use the data obtained within their own apps or systems. In order to use the API correctly, 
+            please follow the following instructions: 
+            <br><br>
+            <b>Get All Addresses: </b><i>/api/address</i><br>
+            <b>Get All Reviews: </b><i>/api/reviews</i><br>
+            <b>Find Review by Tenant: </b><i>/api/tenant</i><br>
+            <b>Find Review by Neighbour: </b><i>/api/neighbour</i><br>
+            <b>Find Review by Visitor: </b><i>/api/visitor</i><br>
+            <b>Find Review by Rating: </b><i>/api/rating/...</i><br>
+            <b>Find Review by Property Door Number: </b><i>/api/door/...</i><br>
+            <b>Find Review by Street Name: </b><i>/api/street/...</i><br>
+            <b>Find Review by Location:</b><i>/api/location/...</i><br>
+            <b>Find Review by Postcode: </b><i>/api/postocde/...</i>
+        </p>
+        <p>
+            Users can also upload a new address into the database by clicking 
+            <a href="{{ url_for('upload_address') }}" style="color: red;">here</a>.
+        </p>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}
