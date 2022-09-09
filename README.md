@@ -122,7 +122,9 @@ pip install Flask-SQLAlchemy
 pip install datetime
 pip install geopy
 pip install folium
+pip install gunicorn
 ```
+
 
 
 #### The Next Update(s) ####
