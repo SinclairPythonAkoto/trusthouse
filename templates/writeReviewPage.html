@@ -24,21 +24,21 @@
     <div class="bg-img">
         <form action="{{ url_for('write_review') }}" class="container" method="post" enctype="multipart/form-data">
          <h1 class="disableBlur">Address</h1>
-	    <label for="propertyNumber">Door / Property Number</label>
+	    <label for="propertyNumber"><b>Door / Property Number</b></label>
 	    <input type="text" placeholder="Enter Door/Property Number" name="propertyNumber" style="width:89%" required/><br>
-	    <label for="streetName">Street</label><br>
+	    <label for="streetName"><b>Street</b></label><br>
 	    <input type="text" placeholder="Enter Street Name" name="streetName" style="width:89%" required/>
-	    <label for="town_city">Residence</label><br>
+	    <label for="town_city"><b>Residence</b></label><br>
 	    <input type="text" placeholder="Enter Town or City" style="width:89%" name="town_city"/>
-	    <label for="postcode">Postcode</label><br>
+	    <label for="postcode"><b>Postcode</b></label><br>
 	    <input type="text" placeholder="Enter Postcode" name="postcode" style="width:89%" required/>   
 	    <hr>
 	    <h1>Your Review</h1>
-	    <label for="rating">Property Rating</label>
-	    <p>1 <input type="range" id="rating" name="rating" min="1" max="5" style="accent-color:red"/> 5</p>
-	    <label for="writeReview">Review</label><br>
+	    <label for="rating"><b>Property Rating</b></label>
+	    <p>1 <i style="color: red;">(very bad)</i> <input type="range" id="rating" name="rating" min="1" max="5" style="accent-color:red"/> 5 <i style="color: red;">(very good)</i></p>
+	    <label for="writeReview"><b>Review</b></label><br>
         <textarea placeholder="Write Your Review Here..." rows="7" cols="60" name="reviewText" style="width:89%" required></textarea>
-        <label for="reviewer">Reviewed by:</label>
+        <label for="reviewer"><b>Reviewed by:</b></label>
 	    <div class="wrapper-class">
 	    <input type="radio" id="tenant" value="tenant" name="selection"/>
 		<label for="tenant" style="color:black">Tenant</label>
