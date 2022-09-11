@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\sincl\OneDrive\Desktop\PyVault\FlaskFridays\TrustHouse0.2\virtual_env"
+VIRTUAL_ENV="C:\Users\sincl\OneDrive\Desktop\PyVault\FlaskFridays\TrustHouse0.4.1\virtual_env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
