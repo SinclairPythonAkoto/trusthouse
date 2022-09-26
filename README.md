@@ -480,6 +480,12 @@ pip install folium
 pip install gunicorn
 ```
 
+### Create requirements.txt File ###
+The `requirements.txt` file is needed to enable the app to be able to run all the libraries installed.  You can either manually add all the libraries, or you can automate the process by using the following command in the terminal:
+```
+pip3 freeze > requirements.txt
+```
+
 
 #### The Next Update(s) ####
 - Include functionality to include pictures - how to save more than one pic
