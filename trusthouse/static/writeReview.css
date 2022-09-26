@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    font-family: "Poppins", sans-serif
+}
+label, h1, hr {color: red;}
+* {
+    boxing-size: border-box;
+}
+.bg-img {
+        background-image: url('Moss_Side_terraced.jpg');
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.container {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 600px;
+    padding: 16px;
+    background-color: white
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+input[type=text]:focus, textarea:focus input[type=file]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+input[type='radio']:checked:after {
+        width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: red;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+.btn {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.btn:hover {
+    opacity: 3;
+}
+.wrapper-class input[type="radio"] {
+        width: 15px;
+}
+.wrapper-class label {
+        display: inline;
+    margin-right: 5px;
+}
+.blur-img {
+        filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+.disableBlur {
+        filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.checked {
+        color: red;
+}
