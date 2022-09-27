@@ -10,13 +10,7 @@ class Address(db.Model):
     postcode = db.Column(db.String(10), nullable=False)
     geo_map = db.relationship('Maps', backref='location', uselist=False)
     reviews = db.relationship('Review', backref='address')
-    buisnesses = db.relationship('Buisness', backref='place')
+    buisnesses = db.relationship('Business', backref='place')
+    incident = db.relationship('Incident', backref='area')
 
-    '''
-    landmark
-    place
-    shelter
-    refuge
-    residence
-    '''
     

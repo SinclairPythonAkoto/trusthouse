@@ -1,7 +1,8 @@
 import folium
 from flask.views import MethodView
 from trusthouse.models.maps import Maps
-from trusthouse.models.buisness import Buisness
+from trusthouse.models.buisness import Business
+from trusthouse.models.incident import Incident
 from geopy.geocoders import Nominatim
 from ..extensions import app
 
@@ -9,7 +10,8 @@ from ..extensions import app
 class TrustHouseMap(MethodView):
     def get(self):
         coordinates = Maps.query.all()
-        business_data = Buisness.query.all()
+        business_data = Business.query.all()
+        incident_reports = Incident.query.all()
         longitude = '-0.1244477'
         latitude = '51.4994252'
         location = float(latitude), float(longitude)
@@ -41,27 +43,28 @@ class TrustHouseMap(MethodView):
                 if trusthouse_map.address_id == buisness.address_id:
                     folium.Marker(
                         location=[float(trusthouse_map.lat), float(trusthouse_map.lon)],
-                        popup=f'{buisness.name.upper()},\n{buisness.category},\n{buisness.services},\n{buisness.contact},\n{buisness.place.postcode.upper()}',
+                        popup=f'{buisness.name.upper()},\n{buisness.category},\n{buisness.contact},\n{buisness.place.postcode.upper()}',
                         tooltip='View Buisness',
                         icon=folium.Icon(color='green', icon='gbp', prefix='fa')
+                    ).add_to(map)
+
+        # add incident marker to map
+        for trusthouse_map in coordinates:
+            for report in incident_reports:
+                if trusthouse_map.address_id == report.address_id:
+                    folium.Marker(
+                        location=[float(trusthouse_map.lat), float(trusthouse_map.lon)],
+                        popup=f'{report.category.upper()},\n{report.description},\n{report.area.street},\n{report.area.postcode},\n{report.date}',
+                        tooltip='View Incident',
+                        icon=folium.Icon(color='orange', icon='exclamation-triangle', prefix='fa')
                     ).add_to(map)
              
         return map._repr_html_()
 
 
 app.add_url_rule(
-    '/trusthouse-map',
+    '/map',
     view_func=TrustHouseMap.as_view(
         name='trust_house_map'
     ),
 )
-
-
-'''
-    id 
-    name 
-    category 
-    services 
-    contact 
-    address_id 
-'''

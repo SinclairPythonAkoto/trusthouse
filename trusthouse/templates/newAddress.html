@@ -12,28 +12,30 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <br><br><br>
-    <h1>Upload New Address</h1>
-    <form action="{{ url_for('upload_address') }}" method="post">
-        <label for="doorNum">Door Number:</label>
-        <input type="text" name="doorNum" id="doorNum" placeholder="Door Number" required>
-        <label for="streetName">Street:</label>
-        <input type="text" name="streetName" id="streetName" placeholder="Street" required>
-        <label for="addressLocation">Residence:</label>
-        <input type="text" name="addressLocation" id="addressLocation" placeholder="Town or City" required>
-        <label for="addressPostcode">Postcode:</label>
-        <input type="text" name="addressPostcode" id="addressPostcode" placeholder="Postcode" required>
-        <button type="submit" class="btn">Add New Address</button>
-    </form>
-    {% if message %}
-        <br>
-        <div>
-            <p style="color: red;">
-                {{ message }}
-            </p>
-        </div>
-    {% endif %}
+<div class="bg-img">
+    <div class="container">
+        <h1>Upload New Address</h1>
+        <form action="{{ url_for('upload_address') }}" method="post">
+            <label for="doorNum">Door Number:</label>
+            <input type="text" name="doorNum" id="doorNum" placeholder="Door Number" required>
+            <label for="streetName">Street:</label>
+            <input type="text" name="streetName" id="streetName" placeholder="Street" required>
+            <label for="addressLocation">Residence:</label>
+            <input type="text" name="addressLocation" id="addressLocation" placeholder="Town or City" required>
+            <label for="addressPostcode">Postcode:</label>
+            <input type="text" name="addressPostcode" id="addressPostcode" placeholder="Postcode" required>
+            <button type="submit" class="btn">Add New Address</button>
+        </form>
+        {% if message %}
+            <br>
+            <div>
+                <p style="color: red;">
+                    {{ message }}
+                </p>
+            </div>
+        {% endif %}
+    </div>
 </div>
+
 
 {% endblock%}

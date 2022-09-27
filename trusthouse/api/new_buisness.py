@@ -9,11 +9,10 @@ from flask import jsonify
 from ..extensions import app
 
 
-class NewBuisnessAPI(MethodView):
-    def get( self, buisness_name, category, services, contact, door_num, streetname, location, postcode):
+class NewBusinessAPI(MethodView):
+    def get(self, buisness_name, category, contact, door_num, streetname, location, postcode):
         name = buisness_name
         category = category
-        services = services
         contact = contact
         door_num = door_num
         streetname = streetname
@@ -46,7 +45,6 @@ class NewBuisnessAPI(MethodView):
                 create_new_buisness(
                     name.lower(),
                     category.lower(),
-                    services.lower(),
                     contact.lower(),
                     new_address,
                 )
@@ -56,7 +54,6 @@ class NewBuisnessAPI(MethodView):
                     'New Upload': {
                         'Business Name': name.lower(),
                         'Business Category': category.lower(),
-                        'Services': services.lower(),
                         'Contact': contact.lower(),
                         'Business Address': {
                             'Door Number': door_num.lower(),
@@ -70,8 +67,8 @@ class NewBuisnessAPI(MethodView):
 
 
 app.add_url_rule(
-    '/api/new-business/<buisness_name>,<category>,<services>,<contact>,<door_num>,<streetname>,<location>,<postcode>',
-    view_func=NewBuisnessAPI.as_view(
+    '/api/new/business/<buisness_name>,<category>,<contact>,<door_num>,<streetname>,<location>,<postcode>',
+    view_func=NewBusinessAPI.as_view(
         name='create_new_buisness'
     )
 )

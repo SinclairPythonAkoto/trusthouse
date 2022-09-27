@@ -1,0 +1,260 @@
+{% extends 'layout2.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+    <div class="w3-container" style="margin-top:80px" id="home">
+    <h1 class="w3-jumbo"><b>Trust House APIs</b></h1>
+    <h1 class="w3-large" style="color:red">Backend services for users and developers to collaborate with.</hr>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+</div>
+<br>
+<div class="w3-container" id="description">
+    <h2 class="w3-xxlarge"><b>Who's It For? What's The Purpose?</b></h2>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        The Trust House API is <i>open source</i>, meaning its available for everyone to access - <b>for free!</b><br>
+        <br>
+        From private buisnesses, to landlords, letting agencies, the local authority and even the public, 
+        anyone can access the data from Trust House by following the steps provided below. <br>
+        <br>
+        Even though the reviews and the updates made to the map are anonymous, 
+        Trust House still wanted to provide a level of transparency - so we made the web app <i>open source</i> 
+        and also enabled a number of backend services. <br>
+        <br>
+        These backend services can be used by the public, and also fellow developers to use the Trust House data within their own applications. 
+    </p>
+</div>
+<br>
+<div class="w3-container" id="allAddresses">
+    <h3 class="w3-xxlarge"><b>Get All Addresses</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        This will query the database from the web browser and will return a JSON back to the user. <br>
+        In order to view all the address, you can enter the following in the web browser: <br>
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/address</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="allReviews">
+    <h3 class="w3-xxlarge"><b>Get All Reviews</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        The database will be queried in order for the user to recieve the data back as a JSON object. <br>
+        In order to obtain all the reviews, you can enter the following into the web browser: <br>
+        Description on how to use the api to get all reviews.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/reviews</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="allTenants">
+    <h3 class="w3-xxlarge"><b>Reviews From Tenants</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users are able to filter the reviews and choose to view reviews from only tenants.
+        The data recieved will be in a JSON format. <br>
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/tenant</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="allNeighbours">
+    <h3 class="w3-xxlarge"><b>Reviews From Neighbours</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users are able to filter the reviews and choose to view reviews from only neighbours.
+        The data recieved will be in a JSON format. <br>
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/neighbour</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="allVisitors">
+    <h3 class="w3-xxlarge"><b>Reviews From Visitors</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users are able to filter the reviews and choose to view reviews from only visitors.
+        The data recieved will be in a JSON format. <br>
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/visitor</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="filterRating">
+    <h3 class="w3-xxlarge"><b>Reviews via Rating</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users are able to filter the reviews by specifying the review rating. 
+        The response from the user request will be in a JSON format.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/rating/...</i>
+    </p>
+    <p>
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/rating/3</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="filterDoor">
+    <h3 class="w3-xxlarge"><b>Reviews via Door Number</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users can filter the reviews by specifying the property door number. 
+        The response from the user request will be in a JSON format.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/door/...</i>
+    </p>
+    <p>
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/door/34</i>
+    </p>
+    <p>
+        You can enter the name of the property if the property doesn't have a door number
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/door/The Local Pub</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="filterStreet">
+    <h3 class="w3-xxlarge"><b>Reviews via Street Name</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users can filter the reviews by specifying the property;s street name. 
+        The response from the user request will be in a JSON format.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/street/...</i>
+    </p>
+    <p>
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/street/London Road</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="filterLocation">
+    <h3 class="w3-xxlarge"><b>Reviews via Location</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users can filter the reviews by specifying the property's location.
+        <i>In some cases, you may not live in a city, so Trust House has made it possible for users to enter any location - simplifying everyone's lives!</i>
+        The response from the user request will be alos in a JSON format.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/location/...</i>
+    </p>
+    <p>
+        <b>Filter by town:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/location/Clapham Common</i>
+    </p>
+    <p>
+        <b>Filter by city:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/location/London</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="filterPostcode">
+    <h3 class="w3-xxlarge"><b>Reviews via Postcode</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Users can filter the reviews by specifying the property's postcode.
+        The response from the user request will be alos in a JSON format.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/postcode/...</i>
+    </p>
+    <p>
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/postcode/PE4 7UR</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="newAddress">
+    <h3 class="w3-xxlarge"><b>Upload New Address</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        For this API users can create a new address simply by entering the details in the web browser.
+        Although it is accessible for the public, primarily this is set up for businesses and private landlords who may want to include their property into the Trust House database. <br>
+        The user will recieve a response as a JSON format, letting them know if their upload was successful or not.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/new/address/address_door_num,address_street_name,address_location,address_postcode</i>
+    </p>
+    <p>
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com/api/new/address/</i><i style="color: red;">4A,Alfred Street,Blackpool,FY1 4HL</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="newBusiness">
+    <h3 class="w3-xxlarge"><b>Upload Business To Map</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        The API allow users who are business owners to upload their services on the Trust House map.
+        This means anyone who has a buisness can upload it to the map in the hope to get more traffic! <br>
+        Users need to be aware that there are only limited amount of characters allowed for each section of every entry. <br>
+        <br>
+        For the <b>category</b> entry, users are advised to stick to one word or a short phrase as only 15 characters are allowed (maxium).
+        <br>
+        Trust House hopes that as this site grows, more users will use this as a utility to advertise their business. <br>
+        <br>
+        The user will recieve a response as a JSON format, letting them know if their upload was successful or not.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/new/buisness/buisness_name,category,contact,door_num,streetname,location,postcode</i>
+    </p>
+    <p>
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com/api/new/business/</i><i style="color: red;">The Lounge,bar & restuarant85,Bootham Crescent,Ringford,DG7 8RT</i>
+    </p>
+</div>
+<br>
+<div class="w3-container" id="newIncident">
+    <h3 class="w3-xxlarge"><b>Upload Incident To Map</b></h3>
+    <hr style="width:50px;border:5px solid red" class="w3-round"/>
+    <p>
+        Trust House wanted to provide a level of trust within the community for our users, 
+        so we created a way for users to report any incident or emergencies that may happen to occur in or near your area. <br>
+        Incidents can be reported directly from teh web browser which will then create a marker on the Trust House map. <br>
+        <br>
+        <b>Trust House must stress to always call the emergency services first if you feel you or anyone else may be in danger!</b><br>
+        <br>
+        The incident reported by the user can then be viewed by anyone who has access to the website.
+        In the future Trust House plans to work closely with local authorities where each report will be automatically sent to the emergency services.
+        In future updates a bot could be craeted to send a Twitter post of each incident, linking it to the emergency services. <br>
+        <br>
+        For the <b>category</b> entry, users are advised to stick to one word or a short phrase as only 15 characters are allowed (maxium). <br>
+        <br>
+        For the <b>description</b> entry, users are advised to keep <i>'keep it short'</i> - to one sentance, or two short sentances - as only 40 characters are allowed (maximu). <br>
+        <br>
+        The user will recieve a response as a JSON format, letting them know if their upload was successful or not.
+    </p>
+    <p>
+        <b>Type in web browser:</b><br>
+        <i>https://trusthouse.onrender.com</i><i style="color: red;">/api/report/incident/description,door_num,streetname,location,postcode</i>
+    </p>
+    <p>
+        <b>Example:</b><br>
+        <i>https://trusthouse.onrender.com/api/report/</i><i style="color: red;">Street fight,Two people started arguing now their fighting right outside my house!,96,Windsor Road,Bradford,BD75 0PB</i>
+    </p>
+</div>
+{% endblock %}

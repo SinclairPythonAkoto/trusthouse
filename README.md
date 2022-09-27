@@ -115,7 +115,7 @@ return map._repr_html()
 ```
 
 
-# Trust House v 0.4 #
+# Trust House v. 0.4 #
 In this version I will refactor the codebase with **Flask Blueprint**.
 ***This app is incomplete.***
 
@@ -316,14 +316,14 @@ Here is where I create the variables and also *the layout*.
 The user must follow the same index as above otherwise the user will end up having ***data in thr wrong columns***, which would give the user unintended results.
 
 
-# Trust House v.0.4.2 # 
+# Trust House v. 0.4.2 # 
 In this version, now that is set up as a modular app it is easier for me to cherry pick areas of code where I would like to refactor.
 
 In most cases, the need to refactor will be due to the coe being repeated across the codebase.
 Most of the refactoring will be changing repetative tasks *(like checking if a value exists in the database)* into functions.
 
 
-# Trust House v.0.4.3.1 #
+# Trust House v. 0.4.3.1 #
 In this version I will create the functionality for users to be able to add their business details to the Trust House map via a backend API.
 
 I will have to include an extra database table for the buisness names, contact etc.  
@@ -455,6 +455,15 @@ for trusthouse_map in coordinates:
 ``` 
 
 
+# Trust House v. 0.4.3.2 #
+In this update I will create a backend functionality for users to report incidents within their area.
+
+The logic will be very similar to the *Buisness API* - but instead it will record the address, the co-ordinates along with the type & desciption of the incident.
+
+I have also reduced the amount of entries for the *Buisness* table.
+
+I also included the new API's in the user iterface; a new page was created for a more comprehensive guide on how to use the Trust House APIs.
+
 ### Run the App ###
 Now we have successfully created the database tables we can *install* our app to be able to run it with `flask --app`.
 
@@ -480,25 +489,9 @@ pip install folium
 pip install gunicorn
 ```
 
-### Create requirements.txt File ###
-The `requirements.txt` file is needed to enable the app to be able to run all the libraries installed.  You can either manually add all the libraries, or you can automate the process by using the following command in the terminal:
-```
-pip3 freeze > requirements.txt
-```
-
 
 #### The Next Update(s) ####
 - Include functionality to include pictures - how to save more than one pic
 - Save pictures in db and display back to user
 - May need to do a **Many to Many** relationship between `Review` table and `Pictures` table.
-- Include functionality for users to upload thier buisness address details to be displayed on the map (part of self local advertisement)
-- Build a business directory
-- Create a drop down selection for users to search reviews by tenant, neighbours, vistors.
-- Create functionality for users to upload buisness via web browser API
-  - it should be linked to the addres model
-  - one to many relationship
-  - each new entry creates a new marker on the map
-  - the marker will be a differnt color and different icon from the reviews
-- Create functionality for users to search reviews by tenant, neighbour, visitor
-- Return more data in the JSON objects (include the map coordinates of the addresses)
 

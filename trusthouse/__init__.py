@@ -16,6 +16,7 @@ import trusthouse.models.review
 # user interface
 import trusthouse.routes.welcome_screen
 import trusthouse.routes.homepage
+import trusthouse.routes.trusthouse_api
 import trusthouse.routes.create_review
 import trusthouse.routes.display_reviews
 import trusthouse.routes.display_locations
@@ -39,5 +40,7 @@ import trusthouse.api.filter_location
 import trusthouse.api.filter_postcode
 # create new address via backend api
 import trusthouse.api.new_address
-# create new buisness address
+# create new buisness address api
 import trusthouse.api.new_buisness
+# report new incident api
+import trusthouse.api.report_incident

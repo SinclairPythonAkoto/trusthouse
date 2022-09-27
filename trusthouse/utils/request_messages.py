@@ -34,7 +34,8 @@ def error_message():
     error_message( )[1] = no match found
     error_message( )[2] = status code
     error_message( )[3] = business error
-    
+    error_message( )[4] = incident error
+
     Returns a tuple of dictionaries with the error message and status.
     """
     error = {
@@ -42,8 +43,9 @@ def error_message():
     }
     no_match = {'Error': 'No match found. Please check and try again.'}
     status = {'status': 400}
-    business_error = {'Error': 'Your listing could not be uploaded, we could not locate the co-ordinates of the postcode given.'}
-    return error, no_match, status, business_error
+    business_error = {'Error': 'Your listing could not be uploaded. We could not locate the co-ordinates of the postcode given.'}
+    incident_error = {'Error': 'Your incident could not be uploaded. We could not locat ethe co-ordinates of the postcode.'}
+    return error, no_match, status, business_error, incident_error
 
 
 def ok_message():

@@ -56,7 +56,7 @@ class WriteReview(MethodView):
                 message = error_message()[0]['Error']
                 return render_template('writeReviewPage.html', message=message)
         else:
-            if check_door == False and check_postcode == True:
+            if (check_door == False or True) and check_postcode == True:
                 new_address = create_new_address(
                     door.lower(),
                     street_name.lower(),

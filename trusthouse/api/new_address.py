@@ -82,7 +82,7 @@ class NewAddressAPI(MethodView):
 
 
 app.add_url_rule(
-    '/api/new-address/<address_door_num>,<address_street_name>,<address_location>,<address_postcode>',
+    '/api/new/address/<address_door_num>,<address_street_name>,<address_location>,<address_postcode>',
     view_func=NewAddressAPI.as_view(
         name='create_new_address'
     ),
